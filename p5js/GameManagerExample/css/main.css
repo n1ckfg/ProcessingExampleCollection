@@ -1,0 +1,32 @@
+body {
+	background: #555555;
+	font-size: 18px;
+	color: black;
+}
+
+a {
+	color: white;
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+canvas {
+	border: 1px solid black;
+}
+
+.sketch {
+	margin-bottom: 1em;
+}
+
+#container {
+	background: #aaaaaa;
+	width: 640px;
+	height: 100%;
+	position: relative;
+	padding: 1em;
+	margin: auto;
+}
+
