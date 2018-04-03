@@ -3,11 +3,13 @@ import peasy.PeasyCam;
 PeasyCam cam;
 
 PShape pod;
+//MeshObj podObj;
 
 void setup() {
   size(640, 480, P3D);
   cam = new PeasyCam(this, 400);
   pod = loadShape("battle_pod_tri.obj");
+  //podObj = new MeshObj(pod);
 }
 
 void draw() {
@@ -20,5 +22,6 @@ void draw() {
   rotateX(radians(180));
   rotateY(radians(90));
   shape(pod, 0, 0);
+  //podObj.draw();
   popMatrix();
 }
