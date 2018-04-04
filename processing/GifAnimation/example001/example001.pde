@@ -22,6 +22,8 @@ void draw() {
   for (int i=0; i<robots.size(); i++) {
     robots.get(i).run();
   }
+  
+  surface.setTitle(""+frameRate);
 }
 
 void keyPressed() {

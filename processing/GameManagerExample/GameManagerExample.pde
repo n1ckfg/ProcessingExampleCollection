@@ -29,4 +29,6 @@ void draw() {
   tex.endDraw();
   bloomDraw();
   player.run();
+  
+  surface.setTitle(""+frameRate);
 }

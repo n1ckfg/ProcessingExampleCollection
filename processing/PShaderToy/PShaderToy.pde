@@ -25,4 +25,6 @@ void draw() {
   ellipse(3 * (width/4), 3 * (height/4), size, size);
   
   runShaders();
+  
+  surface.setTitle(""+frameRate);
 }

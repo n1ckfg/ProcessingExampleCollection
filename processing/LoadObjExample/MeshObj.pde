@@ -1,7 +1,7 @@
 class MeshObj {
 
   ArrayList<MeshObjChild> obj;
-  
+ 
   MeshObj(PShape _shape) {
     obj = new ArrayList<MeshObjChild>();
     
@@ -16,6 +16,12 @@ class MeshObj {
     }
   }
   
+  void drawVoxel() {
+    for (int i=0; i<obj.size(); i++) {
+      obj.get(i).drawVoxel();
+    }
+  }
+  
 }
 
 class MeshObjChild {
@@ -23,9 +29,10 @@ class MeshObjChild {
   ArrayList<PVector> points;
   color strokeColor;
   color fillColor;
-  float strokeWeightVal = 0.0;
+  float strokeWeightVal = 0.001;
+  float voxelSize = 0.05;
   String material = "shiny";
-  
+
   MeshObjChild(PShape _shape) {
     points = new ArrayList<PVector>();
     
@@ -46,21 +53,43 @@ class MeshObjChild {
     }
   }
   
-  void draw() {
-    if (strokeWeightVal > 0.00001) {
+  void setMaterial(boolean doStroke, boolean doFill) {
+    if (doStroke && strokeWeightVal > 0.00001) {
       strokeWeight(strokeWeightVal);
       stroke(strokeColor);
     } else {
       noStroke();
     }
-    fill(fillColor);
-    //jr.fill(material, red(fillColor), green(fillColor), blue(fillColor));
+    
+    if (doFill) {
+      fill(fillColor);
+      //jr.fill(material, red(fillColor), green(fillColor), blue(fillColor));
+    } else {
+      noFill();
+    }
+  }
+  
+  void draw() {
+    setMaterial(true, true);
+  
     beginShape();
     for (int i=0; i<points.size(); i++) {
       PVector p = points.get(i);
       vertex(p.x, p.y, p.z);
     }
     endShape();
+  }
+  
+  void drawVoxel() {
+    setMaterial(false, true);
+
+    for (int i=0; i<points.size(); i++) {
+      PVector p = points.get(i);
+      pushMatrix();
+      translate(p.x, p.y, p.z);
+      box(voxelSize);
+      popMatrix();
+    }
   }
   
 }

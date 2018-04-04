@@ -13,6 +13,8 @@ void draw() {
   background(255, 0, 0);
   fill(255);
   rect(10, 10, frameCount, 10);
+  
+  surface.setTitle(""+frameRate);
 }
 
 void mousePressed() {

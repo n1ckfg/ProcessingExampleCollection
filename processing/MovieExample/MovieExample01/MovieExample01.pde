@@ -18,4 +18,6 @@ void draw() {
   clip2.run();
   if (millis() > 10000) clip2.alive = false;
   if (millis() > 14000) clip1.alive = false;
+  
+  surface.setTitle(""+frameRate);
 }

@@ -23,6 +23,8 @@ void draw() {
   background(0);
   clip1.run();
   clip2.run();
+  
+  surface.setTitle(""+frameRate);
 }
 
 void keyPressed() {

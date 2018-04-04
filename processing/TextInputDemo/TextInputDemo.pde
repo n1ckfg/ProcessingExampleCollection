@@ -6,4 +6,6 @@ void setup() {
 void draw() {
   background(0);
   drawRiTa();
+  
+  surface.setTitle(""+frameRate);
 }

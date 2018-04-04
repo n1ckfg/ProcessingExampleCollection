@@ -35,6 +35,8 @@ void draw() {
   text(currentRoom.name, fontSize + 2, (fontSize * 1.5) + 2);
   fill(255, 255, 0);
   text(currentRoom.name, fontSize, fontSize * 1.5);
+  
+  surface.setTitle(""+frameRate);
 }
 
 Room getRoom(String _name) {

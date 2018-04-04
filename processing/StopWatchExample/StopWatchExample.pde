@@ -28,4 +28,6 @@ void draw() {
   ellipse(width/2, height/2, 120, 80);
   fill(255);
   text(s, width/2, (height/2) + (fontSize/3));
+  
+  surface.setTitle(""+frameRate);
 }

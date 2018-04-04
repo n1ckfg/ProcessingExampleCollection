@@ -18,6 +18,8 @@ void draw() {
   fill(255);
   ellipse(mouseX, mouseY, 10, 10);
   sendOsc();
+  
+  surface.setTitle(""+frameRate);
 }
 
 void mousePressed() {

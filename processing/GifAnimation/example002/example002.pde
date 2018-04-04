@@ -10,4 +10,6 @@ void setup() {
 void draw() {
   background(127);
   robot.run();
+  
+  surface.setTitle(""+frameRate);
 }

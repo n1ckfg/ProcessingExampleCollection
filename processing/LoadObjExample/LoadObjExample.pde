@@ -3,13 +3,17 @@ import peasy.PeasyCam;
 PeasyCam cam;
 
 PShape pod;
-//MeshObj podObj;
+MeshObj podObj;
+
+GameState gs;
 
 void setup() {
   size(640, 480, P3D);
+  gs = GameState.NATIVE;
+  
   cam = new PeasyCam(this, 400);
   pod = loadShape("battle_pod_tri.obj");
-  //podObj = new MeshObj(pod);
+  podObj = new MeshObj(pod);
 }
 
 void draw() {
@@ -21,7 +25,20 @@ void draw() {
   scale(1000, 1000, 1000);
   rotateX(radians(180));
   rotateY(radians(90));
-  shape(pod, 0, 0);
-  //podObj.draw();
+  
+  switch(gs) {
+    case NATIVE:
+      shape(pod, 0, 0);
+      break;
+    case MESHOBJ:
+      podObj.draw();
+      break;
+    case MESHOBJ_VOXEL:
+      podObj.drawVoxel();
+      break;
+    }
+  
   popMatrix();
+  
+  surface.setTitle(""+frameRate);
 }
