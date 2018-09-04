@@ -1,0 +1,45 @@
+[submodule "multi_p5/AnimSprite"]
+	path = multi_p5/AnimSprite
+	url = https://github.com/n1ckfg/AnimSprite
+[submodule "multi_p5/GameManagerExample"]
+	path = multi_p5/GameManagerExample
+	url = https://github.com/n1ckfg/GameManagerExample
+[submodule "multi_p5/GifAnimation"]
+	path = multi_p5/GifAnimation
+	url = https://github.com/n1ckfg/GifAnimation
+[submodule "multi_p5/MystCorridor"]
+	path = multi_p5/MystCorridor
+	url = https://github.com/n1ckfg/MystCorridor
+[submodule "multi_p5/HitDetectExample"]
+	path = multi_p5/HitDetectExample
+	url = https://github.com/n1ckfg/HitDetectExample
+[submodule "multi_p5/StopWatchExample"]
+	path = multi_p5/StopWatchExample
+	url = https://github.com/n1ckfg/StopWatchExample
+[submodule "processing_only/BloomDemo"]
+	path = processing_only/BloomDemo
+	url = https://github.com/n1ckfg/BloomDemo
+[submodule "multi_p5/CameraDrive"]
+	path = multi_p5/CameraDrive
+	url = https://github.com/n1ckfg/CameraDrive
+[submodule "processing_only/MovieExample"]
+	path = processing_only/MovieExample
+	url = https://github.com/n1ckfg/MovieExample
+[submodule "processing_only/PShaderToy"]
+	path = processing_only/PShaderToy
+	url = https://github.com/n1ckfg/PShaderToy
+[submodule "processing_only/PWindow_Example"]
+	path = processing_only/PWindow_Example
+	url = https://github.com/n1ckfg/PWindow_Example
+[submodule "processing_only/SlitScanners"]
+	path = processing_only/SlitScanners
+	url = https://github.com/n1ckfg/SlitScanners
+[submodule "processing_only/TextInputDemo"]
+	path = processing_only/TextInputDemo
+	url = https://github.com/n1ckfg/TextInputDemo
+[submodule "processing_only/MeshSequencer"]
+	path = processing_only/MeshSequencer
+	url = https://github.com/n1ckfg/MeshSequencer
+[submodule "processing_only/OscDemo"]
+	path = processing_only/OscDemo
+	url = https://github.com/n1ckfg/OscDemo
